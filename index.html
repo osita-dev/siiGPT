@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI - ChatGPT Clone Interface" />
+    <title>SII GPT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712100.png">
+</head>
+
+<body class="dark">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <button id="new-chat" class="new-chat-btn">+ New Chat</button>
+        </div>
+        <div class="chat-history">
+            <!-- Example chat list -->
+            <div class="chat-item active">Chat with AI</div>
+            <div class="chat-item">Project ideas</div>
+        </div>
+        <div class="sidebar-footer">
+            <button class="settings-btn">⚙ Settings</button>
+        </div>
+    </aside>
+
+    <!-- MAIN CHAT WRAPPER -->
+    <div class="chat-wrapper">
+        <!-- TOP BAR -->
+        <header class="top-bar">
+            <div>SII GPT</div>
+            <div class="header-actions">
+                <button id="in-class-btn" class="in-class-btn">In-Class</button>
+                <div class="profile">User</div>
+            </div>
+        </header>
+
+        <!-- CHAT AREA -->
+        <main class="chat-container" role="log" aria-live="polite">
+            <!-- Messages injected here -->
+        </main>
+
+        <!-- In-Class Popup -->
+        <div class="popup hidden" id="in-class-popup">
+            <div class="popup-content">
+                <h3>In-Class Group</h3>
+                <div class="popup-options">
+                    <button id="create-group-btn" class="popup-option">Create Group</button>
+                    <button id="join-group-btn" class="popup-option">Join Group</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Group Form -->
+        <div class="popup hidden" id="create-group-form">
+            <div class="popup-content">
+                <h3>Create Group</h3>
+                <input type="text" id="group-name" placeholder="Group Name" />
+                <select id="group-subject">
+                    <option>Math</option>
+                    <option>English</option>
+                    <option>Science</option>
+                </select>
+                <button id="submit-group-btn">Create</button>
+            </div>
+        </div>
+
+        <!-- Join Group List -->
+        <div class="popup hidden" id="join-group-list">
+            <div class="popup-content">
+                <h3>Available Groups</h3>
+                <div class="group-list" id="group-list">
+                    <!-- Groups dynamically populated -->
+                </div>
+            </div>
+        </div>
+
+        <!-- INPUT AREA -->
+        <footer class="input-area">
+            <div class="input-container">
+                <!-- Input Section -->
+                <div class="input-top">
+                    <textarea id="message-input" placeholder="Message Siitecch GPT..." rows="1"></textarea>
+                    <button id="send-btn">➤</button>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider"></div>
+
+                <!-- Action Buttons Section (Tools) -->
+                <div class="action-row">
+                    <button class="action-btn" id="select-subject-btn">+ Select Subject</button>
+                </div>
+            </div>
+
+            <!-- Popup (for multi-step selection) -->
+            <div class="popup hidden" id="popup-container">
+                <div class="popup-content">
+                    <h3>Select Subject</h3>
+                    <div class="popup-options" id="subject-options">
+                        <button class="popup-option" data-subject="Math">Math</button>
+                        <button class="popup-option" data-subject="English">English</button>
+                    </div>
+
+                    <div class="popup-step hidden" id="topic-step">
+                        <h3>Select Topic</h3>
+                        <div class="popup-options" id="topic-options"></div>
+                    </div>
+
+                    <div class="popup-step hidden" id="goal-step">
+                        <h3>Choose Goal</h3>
+                        <div class="popup-options" id="goal-options">
+                            <button class="popup-option">Prepare for an exam</button>
+                            <button class="popup-option">Understand the basics</button>
+                            <button class="popup-option">Catch up on missed topics</button>
+                            <button class="popup-option">Learn ahead of class</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src="main.js"></script>
+</body>
+
+</html>
