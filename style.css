@@ -25,7 +25,7 @@ body {
     display: flex;
     background: var(--chat-bg);
     color: var(--text-light);
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* ========== SIDEBAR ========== */
@@ -561,6 +561,7 @@ body {
     }
 
 }
+
 
 
 
