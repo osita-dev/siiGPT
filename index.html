@@ -26,16 +26,18 @@
             <button class="settings-btn">⚙ Settings</button>
         </div>
     </aside>
-<header class="top-bar">
+
+    <!-- MAIN CHAT WRAPPER -->
+    <div class="chat-wrapper">
+        <!-- TOP BAR -->
+        <header class="top-bar">
             <div>SII GPT</div>
             <div class="header-actions">
                 <button id="in-class-btn" class="in-class-btn">In-Class</button>
                 <div class="profile">User</div>
             </div>
-</header>
-    <!-- MAIN CHAT WRAPPER -->
-    <div class="chat-wrapper">
-        <!-- TOP BAR -->
+        </header>
+
         <!-- CHAT AREA -->
         <main class="chat-container" role="log" aria-live="polite">
             <!-- Messages injected here -->
@@ -44,10 +46,10 @@
         <!-- In-Class Popup -->
         <div class="popup hidden" id="in-class-popup">
             <div class="popup-content">
-                <h3>In-Class Group</h3>
+                <h3>In-Class</h3>
                 <div class="popup-options">
-                    <button id="create-group-btn" class="popup-option">Create Group</button>
-                    <button id="join-group-btn" class="popup-option">Join Group</button>
+                    <button id="create-group-btn" class="popup-option">Create In-Class</button>
+                    <button id="join-group-btn" class="popup-option">Join In-Class</button>
                 </div>
             </div>
         </div>
@@ -55,13 +57,9 @@
         <!-- Create Group Form -->
         <div class="popup hidden" id="create-group-form">
             <div class="popup-content">
-                <h3>Create Group</h3>
+                <h3>Create In-class</h3>
                 <input type="text" id="group-name" placeholder="Group Name" />
-                <select id="group-subject">
-                    <option>Math</option>
-                    <option>English</option>
-                    <option>Science</option>
-                </select>
+                
                 <button id="submit-group-btn">Create</button>
             </div>
         </div>
@@ -75,7 +73,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
         <!-- INPUT AREA -->
         <footer class="input-area">
             <div class="input-container">
@@ -86,7 +84,7 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="divider"></div>
+                <!-- <div class="divider"></div> -->
 
                 <!-- Action Buttons Section (Tools) -->
                 <div class="action-row">
@@ -125,6 +123,5 @@
 
         <script src="main.js"></script>
 </body>
-
 
 </html>
