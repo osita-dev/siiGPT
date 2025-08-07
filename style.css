@@ -108,6 +108,10 @@ body {
     padding: 0 var(--spacing-md);
     border-bottom: 1px solid #2d2d2f;
     background: #202123;
+    position:sticky;
+    width:100%;
+    z-index:1000;
+    top:0;
 }
 
 #model-select {
@@ -557,6 +561,7 @@ body {
     }
 
 }
+
 
 
 
