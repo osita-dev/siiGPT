@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Group - In-Class</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header: same pattern as index.html -->
+  <header class="top-bar">
+    <div class="logo">AI GPT</div>
+    <nav class="nav-links">
+      <a href="join-groups.html" class="active">In-Class</a>
+      
+    </nav>
+    <div class="header-actions">
+      <div class="user-info">
+        <span class="user-name">User</span>
+        <img src="https://via.placeholder.com/32" alt="User avatar" class="user-avatar">
+      </div>
+    </div>
+    <!-- Mobile menu toggle -->
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <!-- Main content -->
+  <main class="group-page">
+    <h2 class="page-title">Available Groups</h2>
+    <div class="group-list" id="group-list"></div>
+  </main>
+
+  <script src="join-groups.j"></script>
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI - ChatGPT Clone Interface" />
+    <title>SII GPT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712100.png">
+</head>
+
+<div class="chat-wrapper">
+    <header class="top-bar">
+        <div>SII GPT</div>
+        <div class="header-actions">
+            <button id="in-class-btn" class="in-class-btn">In-Class</button>
+            <div class="profile">
+                <span class="profile-icon">👤</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="chat-container" role="log"></main>
+
+    <!-- Multi-step Popup -->
+    <div id="popup-overlay" class="hidden">
+        <div id="popup-container">
+            <div id="subject-options">
+                <button class="popup-option" data-subject="Math">Math</button>
+                <button class="popup-option" data-subject="English">English</button>
+            </div>
+
+            <div id="topic-step" class="popup-step hidden">
+                <h3>Select Topic</h3>
+                <div id="topic-options"></div>
+            </div>
+
+            <div id="goal-step" class="popup-step hidden">
+                <h3>Choose Goal</h3>
+                <button class="popup-option">Prepare for an exam</button>
+                <button class="popup-option">Understand the basics</button>
+                <button class="popup-option">Catch up on missed topics</button>
+                <button class="popup-option">Learn ahead of class</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="input-area">
+        <div class="input-container">
+            <div class="input-top">
+                <textarea id="message-input" placeholder="Message Siitecch GPT..." rows="1"></textarea>
+                <button id="send-btn">➤</button>
+            </div>
+            <div class="action-row">
+                <button class="action-btn" id="select-subject-btn">+Subject</button>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
